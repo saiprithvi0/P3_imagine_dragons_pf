@@ -1,0 +1,592 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #0c0c0c;
+  --border: #303030;
+  --color: #7e7e7e;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: "Timmons NY", sans-serif;
+}
+#main {
+  width: 100%;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+}
+section {
+  scroll-snap-align: start;
+}
+/* seca  */
+.seca {
+  position: relative;
+  height: 100vh;
+  background-color: #bebeb8;
+  font-family: serif;
+  width: 100%;
+}
+
+.menu {
+  width: 100%;
+  height: 100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  text-transform: uppercase;
+  font-family: "Neue Montreal";
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.menu-item {
+  flex: 1;
+}
+
+.menu-left {
+  text-align: left;
+  margin-left: 2em;
+}
+
+.menu-center {
+  text-align: center;
+  position: relative;
+  top: -25px;
+  font-size: 20px;
+}
+
+.menu-right {
+  text-align: right;
+  margin-right: 2em;
+}
+
+.menu-link {
+  padding: 0 20px;
+}
+
+.hero-image {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper-image {
+  position: absolute;
+  overflow: hidden;
+  margin: 0 auto;
+  width: 50%;
+  height: 100vh;
+}
+
+.imagemain {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid black;
+}
+
+.box {
+  background: #bebeb8;
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 0;
+}
+
+.images {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.img {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 400px;
+  background: #000;
+}
+
+.left {
+  background: url("../assets/1080x1920-1-4-compressed.jpg") no-repeat 50% 50%;
+  background-size: cover;
+  border-radius: 10px;
+  border: 1px solid black;
+}
+
+.right {
+  background: url("../assets/1080x1920-120282829-compressed.jpg") no-repeat 50%
+    50%;
+  background-size: cover;
+  border-radius: 10px;
+  border: 1px solid black;
+}
+
+.header > p {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(255, 0, 0);
+  text-transform: uppercase;
+  font-family: "Devil Breeze";
+  font-size: 150px;
+  -webkit-text-stroke: 1.5px black;
+  font-weight: bold;
+  line-height: 160px;
+}
+
+.title .letter {
+  line-height: 10px;
+}
+
+.sidebar-text {
+  font-family: "Neue Montreal";
+  position: absolute;
+  top: 20%;
+  right: -3rem;
+  transform: translate(-50%, -50%);
+  font-size: 50px;
+  color: transparent;
+  -webkit-text-stroke: 2px rgb(117, 113, 113);
+}
+
+.projects {
+  position: absolute;
+  bottom: 10%;
+  left: 10%;
+  font-weight: bold;
+
+  transform: translate(-50%, -50%);
+  text-transform: uppercase;
+  font-family: "Neue Montreal";
+}
+.img-nav {
+  position: absolute;
+  right: 5%;
+  bottom: 10%;
+  font-weight: bold;
+  font-size: 20px;
+  transform: translate(-50%, -50%);
+  text-transform: uppercase;
+  color: black;
+  font-family: "Neue Montreal";
+}
+.next {
+  position: relative;
+  top: 20px;
+  left: 60px;
+  font-family: "Neue Montreal";
+}
+
+/* seca ends here  */
+.sec1 {
+  position: relative;
+  background-color: #000;
+}
+
+.sec2 {
+  position: relative;
+  background-color: #fff;
+  font-family: "Neue Montreal";
+}
+
+.nav1 {
+  top: 0;
+}
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.nav1,
+footer {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+  text-transform: uppercase;
+  font-size: 30px;
+  letter-spacing: 2px;
+  color: #fff;
+}
+footer {
+  bottom: 0;
+}
+
+.gallery {
+  pointer-events: none;
+}
+
+.item {
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 70px;
+  background-color: #b0b0b0;
+  margin: 10px;
+  opacity: 0;
+}
+
+.hero-copy {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hero-copy p {
+  font-size: 35px;
+  font-family: "FK Grotesk Neue";
+  color: #fff;
+  text-align: center;
+  letter-spacing: -0.04em;
+  line-height: 110%;
+  transition: color 0.3s ease, opacity 0.6s ease;
+}
+
+.hero-copy p span {
+  cursor: pointer;
+  font-family: "Raster";
+  color: rgb(253, 0, 0);
+  font-weight: bold;
+}
+
+.nav1 > img {
+  height: 40px;
+  position: relative;
+  left: -65px;
+  top: -5px;
+  width: 40px;
+}
+
+/* page2 */
+
+.cursor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 30px;
+  z-index: 1000;
+}
+
+.nav2 {
+  position: absolute;
+  width: 100%;
+  padding: 2em;
+  display: flex;
+  font-size: 20px;
+  font-weight: bold;
+  justify-content: space-between;
+  z-index: 2;
+}
+
+.imgteam > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.marquee-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+}
+.marquee-wrapper.t-1 {
+  clip-path: polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%);
+}
+
+.marquee-wrapper > h1 {
+  position: absolute;
+  top: 50%;
+  left: -100%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 150px;
+  text-transform: uppercase;
+  font-weight: 400;
+  width: 100%;
+  white-space: nowrap;
+  animation: marquee 5s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate(0%, -50%);
+  }
+  50% {
+    transform: translate(-5%, -50%);
+  }
+  50.5% {
+    transform: translate(-5%, -50%);
+  }
+  100% {
+    transform: translate(0%, -50%);
+  }
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 450px;
+}
+
+.modal-images {
+  width: 100%;
+  height: 450px;
+}
+
+.role {
+  margin: 5px 0;
+}
+
+.imgteam {
+  position: absolute;
+  width: 100%;
+  height: 450px;
+  transform: rotate(0.1rad);
+  border-radius: 15px;
+  overflow: hidden;
+  clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+}
+
+.imgteam > img {
+  transition: 0.3s ease;
+}
+
+.imgteam:hover > img {
+  transform: scale(1.1);
+}
+.imgteam#t-1 {
+  clip-path: polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%);
+}
+
+.info {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.t-1 {
+  background-color: #c4bca9;
+}
+
+.t-2 {
+  background-color: #6a8d73;
+}
+
+.t-3 {
+  background-color: #e4ffe1;
+}
+.t-4 {
+  background-color: #8e908a;
+}
+
+@media (max-width: 900px) {
+  .modal {
+    width: 400px;
+    height: 600px;
+  }
+  .modal-images {
+    width: 100%;
+    height: 500px;
+  }
+}
+
+/*section 3 animation ends here */
+
+.sec3 {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: #c4bca9;
+  font-family: "Neue Montreal";
+  color: #272525;
+}
+
+.spacer {
+  height: 200px;
+}
+
+.marquee {
+  position: relative;
+  background: #0f0f0f;
+  color: #eee;
+  padding: 30px 0;
+  font-weight: 600;
+  font-size: 60px;
+  text-transform: uppercase;
+  overflow: hidden;
+}
+
+.marquee__inner {
+  display: flex;
+  width: fit-content;
+  flex: auto;
+  flex-direction: row;
+}
+
+.marquee__part {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  padding: 0 4px;
+}
+
+.arrow {
+  width: 65px;
+  height: 65px;
+  margin: 0 0.5em;
+  transform: rotate(180deg);
+  transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.arrow.ctive {
+  transform: rotate(-180deg);
+  transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+/* section 3 animation starts here*/
+
+/* section 4 animation starts here*/
+
+.sec4 {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background: #c4bca9;
+}
+
+.sec4 h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-family: "Acid Grotesk";
+  font-weight: bold;
+  color: black;
+  text-transform: uppercase;
+  font-size: 30px;
+  margin: 0;
+}
+
+.container4 {
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cosmos {
+  position: absolute;
+  width: 80px;
+  height: 150px;
+}
+.cosmic-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--color);
+  animation: fall-and-disappear 5s infinite ease-in-out;
+  transform-origin: bottom;
+  transform: scale(0);
+}
+
+@keyframes fall-and-disappear {
+  0% {
+    opacity: 0;
+    top: 0;
+    left: 0;
+    transform: scale(1);
+  }
+  25% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    top: -200px;
+    transform: scale(1);
+  }
+  100% {
+    top: -150px;
+    left: -300px;
+    transform: scale(0);
+  }
+}
+/* section 4 animation ends here*/
+
+.sec5 {
+  width: 100%;
+  height: 100vh;
+  background-color: #c4bca9;
+  position: relative;
+  z-index: -1;
+  background: url("assets/download\ \(1\).jpeg");
+  background-size: contain;
+  background-position: center;
+}
+.sec6 {
+  width: 100%;
+  height: 100vh;
+  background-color: #c4bca9;
+  position: relative;
+  z-index: -1;
+  background: url("assets/id.png");
+  background-size: contain;
+  background-position: center;
+}
